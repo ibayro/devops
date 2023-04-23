@@ -2,6 +2,7 @@
 This demo branch is a step-by-step guide of how I was coping with my first homework from DevOps course, mentored by @denys_vasyliev on a Prometheus platform.
 
 Here is a hometask description:
+
 Task: implement a web service in a local development environment 
 (reproduce a practical task based on the lecturer's demonstration in the "Build, Ship, Run" coding session)
 
