@@ -2,9 +2,9 @@
 
 In this section the following tasks will be done:
 
-- [x] 1. Create a container image from scratch
-- [ ] 2. Push the container to gcr.io 
-- [ ] 3. Create a k8s cluster and push container to a deployment 
+- [x] Create a container image from scratch
+- [ ] Push the container to gcr.io and create a k8s cluster with a deployment of our container
+- [ ] Create Makefile & Dockerfile  
 
 ### Practice
 Task: Prepare code for cross-platform testing
