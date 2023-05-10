@@ -1,0 +1,71 @@
+Preconditions:
+alias d=docker
+alias k=kubectl
+
+#Image build from Dockerfile
+d build . #current directory
+
+#Start the container on a local machine with port mapping of a local port and a container port
+d run -p 8080:8080 {image id} #
+
+#Retrieve data from a container (Version 1.0.0)
+curl localhost:8080 
+
+#Container tag on gcr.io
+#d tag 75d54ab16edb gcr.io/devops-386308/demo:v3.0.0
+
+#Gcloud Authentification flow
+	gcloud auth login
+	<follow generated link, copy and paste verification code>
+
+#Add current project variable 
+gcloud config set project <project id>
+
+#Add gcr.io space to docker configs
+gcloud auth configure-docker
+
+#DON`T FORGET TO MAKE YOUR CONTAINER REGISTRY HOST PUBLIC 
+go to Container Registery -> Container Registry host -> Public
+
+#Push container to gcr.io
+d push gcr.io/devops-386308/demo:v3.0.0
+
+#Prepare minicube
+Run minicube in an IDE
+
+#Check current configuration
+k config current-context
+
+#Create deploy
+k craete deploy <name> --image <container tag {gcr.io/devops-386308/demo:v3.0.0}>
+
+#Check the deployment
+k get deploy -o wide
+
+#Check pod
+k get po
+
+#See logs
+k logs deploy/demo
+
+#Execute container shell in an interactive mode 
+k exec -it deploy/demo -- sh
+
+#Check processes, interfaces and filesystem 
+ps xa
+ip a
+ls -l
+
+#Set network service for our container
+k expose deploy/demo --port 80 --target-port 8080
+
+#List services and endpoints
+k get svc
+k get ep
+
+#Make port forwarding and run a deployment in a background
+k port-forward svc/demo 8088:80&
+
+#Use curl and see logs
+curl localhost:8088
+k logs deploy/demo
