@@ -1,6 +1,15 @@
-# devops
-DevOps Branch created to store useful info and projects while learning devops
+## Week 3. Containers
 
-https://asciinema.org/a/hP1MB1K7Ft55O3XVE9vQnJ9Id - live coding session to start a docker container from scratch in an isolated environment (unshare)
+In this section the following tasks will be done:
 
-https://asciinema.org/a/583681 - Docker container efficiency analysis performed by dive tool  
+- [x] 1. Create a container image from scratch
+- [ ] 2. Push the container to gcr.io 
+- [ ] 3. Create a k8s cluster and push container to a deployment 
+
+### Practice
+Task: Prepare code for cross-platform testing
+
+#### Dockerfile: base image quay.io/projectquay/golang:1.20;
+#### Makefile: clean should contain the removal of the newly created docker image rmi <IMAGE_TAG>.
+
+Expected result: link to the source code of the Makefile and Dockerfile stored in the repository.
