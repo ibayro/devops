@@ -12,6 +12,8 @@ Considering the risks that may arise with Docker licensing and considering the p
 
 ## Setup demo
 
+![kind create cluster](https://github.com/ibayro/devops/assets/104074570/3ee1c07f-9858-49e2-9d3a-69edb060dc63)
+![scratch demo](https://github.com/ibayro/devops/assets/104074570/84fe6968-fec6-4c9c-9705-8a8c2129bc87)
 
 1. Install kind on a local machine
 2. Create a Kubernetes cluster using `kind create cluster` command
